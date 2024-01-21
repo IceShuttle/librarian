@@ -16,15 +16,16 @@ class Book():
     def checkin(self):
         self.avail+=1
 
-class chbook():
+class Chbook():
     def __init__(self,book,date):
         self.book = book
         self.date = date
 
 class libpatron():
-    def __init__(self,id,name,chbooks=[],reserved=[]):
+    def __init__(self,id,name,passwd,chbooks=[],reserved=[]):
         self.id = id
         self.name =name
+        self.passwd = passwd
         self.chbooks =chbooks
         self.reserved = reserved
     def checkout(self,book):
@@ -40,7 +41,6 @@ class libpatron():
             if bt>RETURN_PERIOD:
                 dues[b]=(bt - RETURN_PERIOD) * FINE_RATE
 
-
 class libtrans():
     def __init__(self,id,book,date):
         self.id = id
@@ -54,6 +54,7 @@ class libbranch():
         self.patrons = patrons
         self.chbooks = chbooks
         self.reserved = reserved
+        return False
 
 def main():
     pass

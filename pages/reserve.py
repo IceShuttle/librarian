@@ -6,7 +6,7 @@ br = branch.name
 p_name = st.session_state["patron"].name
 patron = branch.get_patron(p_name)
 
-st.write(f"Welcome {p_name}")
+st.title("Reserve Book")
 
 bk = st.selectbox("Book Title",branch.get_b_names())
 

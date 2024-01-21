@@ -5,12 +5,11 @@ br = branch.name
 p_name = st.session_state["patron"].name
 patron = st.session_state["patron"]
 
-st.title(f"Welcome {p_name}")
+st.title(f"{p_name}'s Dashboard")
 st.write("Checked Out Books")
 chbooks = []
 for i,b in enumerate(patron.chbooks):
     date_str = b.date.strftime("%d/%m/%Y")
-    # st.write(f"{i+1}.) {b.book.title} \t\t\t {date_str}")
     chbooks.append([b.book.title,date_str])
 st.table(chbooks)
 

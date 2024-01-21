@@ -2,6 +2,8 @@ import streamlit as st
 import pickle as pk
 import library
 
+st.title("Register Patron")
+
 branches = library.get_branches()
 br = st.selectbox("Select Branch",branches)
 name = st.text_input("Name")

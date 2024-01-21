@@ -2,6 +2,7 @@ import streamlit as st
 import library
 import pickle as pk
 
+st.title("Register Branch")
 name = st.text_input("Branch Name")
 passwd = st.text_input("Admin password",type="password")
 

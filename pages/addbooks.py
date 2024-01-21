@@ -2,6 +2,8 @@ import streamlit as st
 import pickle as pk
 import library
 
+st.title("Add Books")
+
 branches = library.get_branches()
 br = st.selectbox("Select Branch",branches)
 title = st.text_input("Title")

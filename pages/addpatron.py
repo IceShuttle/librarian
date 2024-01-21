@@ -24,7 +24,7 @@ if st.button("Add Patron"):
             pk.dump(branch,f)
         st.success("Patron added")
     else:
-        st.error("Cannot add book")
+        st.error("Cannot add Patron")
 
 
 

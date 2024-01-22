@@ -2,6 +2,7 @@ import streamlit as st
 import pickle as pk
 from library import get_branches
 
+st.title("Login")
 branch_name = st.selectbox("Select Branch",get_branches())
 with open(f"./data/{branch_name}",'rb') as f:
     st.session_state["branch"]=pk.load(f)
